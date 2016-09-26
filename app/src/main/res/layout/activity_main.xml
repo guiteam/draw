@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+        <RelativeLayout
+            android:id="@+id/topOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageButton
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton01"
+                    android:src="@drawable/camera"
+                    android:layout_alignParentLeft="true"
+                    android:onClick="takePic"/>
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton02"
+                    android:src="@drawable/paste"
+                    android:layout_alignParentRight="true"
+                    android:onClick="gotoDocument"/>
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton03"
+                    android:src="@drawable/last"
+                    android:layout_toRightOf="@+id/imageButton01"
+                    android:onClick="undo"/>
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton05"
+                    android:src="@drawable/redo"
+                    android:layout_toRightOf="@+id/imageButton03"
+                    android:onClick="redo"/>
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/imageButton04"
+                    android:src="@drawable/set"
+                    android:layout_toRightOf="@id/imageButton05"
+                    android:onClick="clear"/>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/buttonOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pen"
+                android:id="@+id/button02"
+                android:layout_alignParentLeft="true"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stroke"
+                android:id="@+id/button03"
+                android:layout_toRightOf="@id/button02"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shape"
+                android:id="@+id/button04"
+                android:layout_toRightOf="@id/button03"/>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/color"
+                android:id="@+id/button01"
+                android:layout_toRightOf="@id/button04"/>
+
+        </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topOne"
+        android:layout_above="@id/buttonOne"
+
+
+        />
+    <tw.org.iii.draw01.MyView
+        android:id="@+id/myView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topOne"
+        android:layout_above="@id/buttonOne"
+
+        android:text="@string/app_name"
+        />
+
+
+</RelativeLayout>
